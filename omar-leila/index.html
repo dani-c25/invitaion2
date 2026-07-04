@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عمر و ليلى | دعوة زفاف</title>
+<meta name="description" content="دعوة حفل زفاف عمر و ليلى - 16 أوت 2026 - قاعة الحفلات بن قلي">
+
+<!-- Google Fonts: Display serif + clean sans body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient background texture -->
+<div class="bg-veil" aria-hidden="true"></div>
+
+<!-- ================= NAV DOTS (section progress) ================= -->
+<nav class="dot-nav" aria-label="التنقل بين الأقسام">
+  <button class="dot active" data-target="hero" aria-label="الرئيسية"></button>
+  <button class="dot" data-target="countdown" aria-label="العد التنازلي"></button>
+  <button class="dot" data-target="venue" aria-label="القاعة"></button>
+  <button class="dot" data-target="rsvp" aria-label="تأكيد الحضور"></button>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="hero" class="hero">
+  <div class="hero-frame" aria-hidden="true">
+    <span class="corner corner-tl"></span>
+    <span class="corner corner-tr"></span>
+    <span class="corner corner-bl"></span>
+    <span class="corner corner-br"></span>
+  </div>
+
+  <div class="hero-inner">
+    <p class="eyebrow reveal" data-delay="0">بسم الله نبدأ</p>
+
+    <h1 class="hero-names reveal" data-delay="1">
+      <span class="name">عمر</span>
+      <span class="amp" aria-hidden="true">&</span>
+      <span class="name">ليلى</span>
+    </h1>
+
+    <div class="hero-divider reveal" data-delay="2" aria-hidden="true">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+
+    <p class="hero-sub reveal" data-delay="3">يسعدهما دعوتكم لمشاركتهما فرحة الزفاف</p>
+
+    <p class="hero-date reveal" data-delay="4">
+      <span class="day">الأحد</span> · 16 أوت 2026
+    </p>
+
+    <a href="#countdown" class="scroll-cue reveal" data-delay="5" aria-label="انتقل للأسفل">
+      <span class="scroll-cue-line"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+<section id="countdown" class="section countdown-section">
+  <div class="section-head reveal">
+    <p class="eyebrow">باقٍ على الموعد</p>
+    <h2 class="section-title">العد التنازلي</h2>
+  </div>
+
+  <div class="countdown-grid reveal" id="countdown-grid">
+    <div class="count-box">
+      <span class="count-num" id="cd-days">00</span>
+      <span class="count-label">يوم</span>
+    </div>
+    <div class="count-sep" aria-hidden="true">:</div>
+    <div class="count-box">
+      <span class="count-num" id="cd-hours">00</span>
+      <span class="count-label">ساعة</span>
+    </div>
+    <div class="count-sep" aria-hidden="true">:</div>
+    <div class="count-box">
+      <span class="count-num" id="cd-minutes">00</span>
+      <span class="count-label">دقيقة</span>
+    </div>
+    <div class="count-sep" aria-hidden="true">:</div>
+    <div class="count-box">
+      <span class="count-num" id="cd-seconds">00</span>
+      <span class="count-label">ثانية</span>
+    </div>
+  </div>
+
+  <p class="countdown-passed reveal" id="countdown-passed" hidden>الفرحة بدأت — بانتظاركم 🌙</p>
+
+  <div class="save-date reveal">
+    <p class="save-date-text">لا تفوّتوا الموعد</p>
+    <div class="save-date-actions">
+      <button class="btn btn-gold" id="btn-ics">حفظ التاريخ (ICS)</button>
+      <a class="btn btn-outline" id="btn-gcal" href="#" target="_blank" rel="noopener">إضافة لتقويم Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VENUE ================= -->
+<section id="venue" class="section venue-section">
+  <div class="venue-card reveal">
+    <p class="eyebrow">مكان الاحتفال</p>
+    <h2 class="venue-name">قاعة الحفلات بن قلي</h2>
+    <p class="venue-desc">نتشرف بحضوركم لمشاركتنا أجمل لحظات الفرح، في أمسية تليق بهذه المناسبة الغالية على قلوبنا.</p>
+
+    <div class="venue-divider" aria-hidden="true">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+
+    <a class="btn btn-gold" href="https://maps.app.goo.gl/QZKrBppcyYgTwopr8" target="_blank" rel="noopener">
+      موقع القاعة على الخريطة
+    </a>
+  </div>
+</section>
+
+<!-- ================= RSVP ================= -->
+<section id="rsvp" class="section rsvp-section">
+  <div class="section-head reveal">
+    <p class="eyebrow">تأكيد الحضور</p>
+    <h2 class="section-title">سيسعدنا تأكيدكم</h2>
+    <p class="section-note">يرجى تأكيد حضوركم قبل تاريخ الحفل لإتمام الترتيبات</p>
+  </div>
+
+  <form id="rsvp-form" class="rsvp-form reveal" novalidate>
+    <div class="field">
+      <label for="rsvp-name">الاسم الكامل</label>
+      <input type="text" id="rsvp-name" name="name" required autocomplete="name" placeholder="اسمك الكريم">
+    </div>
+
+    <div class="field">
+      <label for="rsvp-guests">عدد المرافقين</label>
+      <input type="number" id="rsvp-guests" name="guests" min="0" max="20" required placeholder="0">
+    </div>
+
+    <fieldset class="field field-radio">
+      <legend>تأكيد الحضور</legend>
+      <div class="radio-row">
+        <label class="radio-pill">
+          <input type="radio" name="attendance" value="نعم" required>
+          <span>نعم، سأحضر</span>
+        </label>
+        <label class="radio-pill">
+          <input type="radio" name="attendance" value="لا" required>
+          <span>أعتذر، لن أتمكن</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="btn btn-gold btn-submit" id="rsvp-submit">
+      <span class="btn-text">إرسال التأكيد</span>
+      <span class="btn-spinner" aria-hidden="true"></span>
+    </button>
+
+    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-ornament" aria-hidden="true">
+    <span class="line"></span>
+    <span class="diamond"></span>
+    <span class="line"></span>
+  </div>
+  <p>عمر &amp; ليلى · 16 أوت 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
