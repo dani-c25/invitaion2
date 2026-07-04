@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad & Samara — 16 Août 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       SPLASH SCREEN
+  ═══════════════════════════════════════════ -->
+  <div id="splash">
+    <div class="splash-blur"></div>
+    <button id="splash-btn" aria-label="Ouvrir l'invitation">
+      <div class="splash-monogram">A <span class="amp">&</span> S</div>
+      <div class="splash-hint">Appuyer pour ouvrir</div>
+    </button>
+    <div class="curtain curtain-left"></div>
+    <div class="curtain curtain-right"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════ -->
+  <main id="main-content" class="hidden">
+
+    <!-- Animated background orbs -->
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="orb orb-4"></div>
+    </div>
+
+    <!-- ── SECTION 1: HERO ── -->
+    <section class="section hero-section">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Wedding Day</p>
+        <h1 class="hero-names">
+          <span class="name-mixed"><span class="script-letter">A</span>hmad</span>
+          <span class="hero-ampersand">&amp;</span>
+          <span class="name-mixed"><span class="script-letter">S</span>amara</span>
+        </h1>
+        <p class="hero-subtitle">sont heureux de vous inviter à célébrer</p>
+        <p class="hero-tagline">are getting married</p>
+
+        <div class="ring-parallax" id="ring-parallax" aria-hidden="true">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="52" fill="none" stroke="#C9A86A" stroke-width="3"/>
+            <circle cx="60" cy="60" r="44" fill="none" stroke="#C9A86A" stroke-width="0.8" stroke-dasharray="4 6"/>
+            <circle cx="60" cy="60" r="36" fill="none" stroke="#C9A86A" stroke-width="1.5"/>
+            <circle cx="60" cy="35" r="8" fill="#C9A86A" opacity="0.9"/>
+            <path d="M56 35 Q60 28 64 35" fill="none" stroke="#8B6914" stroke-width="1.5"/>
+            <circle cx="60" cy="27" r="3" fill="#C9A86A"/>
+            <circle cx="60" cy="60" r="4" fill="#C9A86A" opacity="0.3"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2: INVITATION CARD ── -->
+    <section class="section invite-section">
+      <div class="invite-card">
+        <div class="invite-ornament top"></div>
+        <p class="invite-eyebrow">
+          <span class="script-letter">I</span>nvitation
+        </p>
+        <h2 class="invite-title">
+          <span class="script-letter">C</span>hers <span class="script-letter">A</span>mis <span class="invite-serif">&amp; Famille</span>
+        </h2>
+        <div class="invite-divider"><span>✦</span></div>
+        <p class="invite-body">
+          C'est avec une joie immense et un cœur rempli de bonheur que nous vous convions à partager avec nous ce moment unique et inoubliable. Votre présence illuminera ce jour exceptionnel et le rendra encore plus précieux à nos yeux. Nous serions profondément honorés de vous voir à nos côtés pour célébrer l'amour et l'union.
+        </p>
+        <div class="invite-ornament bottom"></div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: DATE — CALENDAR ── -->
+    <section class="section calendar-section">
+      <div class="section-label">La Date</div>
+      <h2 class="section-title"><span class="script-letter">A</span>oût <span class="serif-part">2026</span></h2>
+      <div class="calendar-wrapper">
+        <div class="calendar-header">
+          <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
+        </div>
+        <div class="calendar-grid">
+          <!-- Aug 2026: starts Saturday (index 5) -->
+          <div class="cal-empty"></div><div class="cal-empty"></div><div class="cal-empty"></div><div class="cal-empty"></div><div class="cal-empty"></div>
+          <div class="cal-day">1</div><div class="cal-day">2</div>
+          <div class="cal-day">3</div><div class="cal-day">4</div><div class="cal-day">5</div><div class="cal-day">6</div><div class="cal-day">7</div><div class="cal-day">8</div><div class="cal-day">9</div>
+          <div class="cal-day">10</div><div class="cal-day">11</div><div class="cal-day">12</div><div class="cal-day">13</div><div class="cal-day">14</div><div class="cal-day">15</div>
+          <div class="cal-day wedding-day" id="wedding-day-cell">
+            <span class="day-num">16</span>
+            <div class="wax-seal" aria-label="Jour du mariage">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="28" fill="#8B1A2A"/>
+                <circle cx="30" cy="30" r="24" fill="none" stroke="#C9A86A" stroke-width="1" stroke-dasharray="3 4"/>
+                <circle cx="30" cy="30" r="19" fill="#7A1525"/>
+                <text x="30" y="27" text-anchor="middle" font-family="Pinyon Script, serif" font-size="11" fill="#C9A86A">A&amp;S</text>
+                <text x="30" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-size="5" fill="#C9A86A" letter-spacing="1">2026</text>
+                <path d="M14 30 Q12 26 14 22 Q16 18 18 22 Q20 18 22 22 Q24 18 26 22" fill="none" stroke="#C9A86A" stroke-width="0.6" opacity="0.5"/>
+              </svg>
+            </div>
+          </div>
+          <div class="cal-day">17</div><div class="cal-day">18</div><div class="cal-day">19</div><div class="cal-day">20</div><div class="cal-day">21</div><div class="cal-day">22</div><div class="cal-day">23</div>
+          <div class="cal-day">24</div><div class="cal-day">25</div><div class="cal-day">26</div><div class="cal-day">27</div><div class="cal-day">28</div><div class="cal-day">29</div><div class="cal-day">30</div>
+          <div class="cal-day">31</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 4: COUNTDOWN ── -->
+    <section class="section countdown-section">
+      <div class="countdown-wrapper">
+        <div class="countdown-unit" id="cd-days">
+          <div class="countdown-track">
+            <div class="countdown-slide active" data-val="0">0</div>
+          </div>
+          <div class="countdown-label">Jours</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit" id="cd-hours">
+          <div class="countdown-track">
+            <div class="countdown-slide active" data-val="0">0</div>
+          </div>
+          <div class="countdown-label">Heures</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit" id="cd-minutes">
+          <div class="countdown-track">
+            <div class="countdown-slide active" data-val="0">0</div>
+          </div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit" id="cd-seconds">
+          <div class="countdown-track">
+            <div class="countdown-slide active" data-val="0">0</div>
+          </div>
+          <div class="countdown-label">Secondes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 5: PROGRAMME ── -->
+    <section class="section programme-section">
+      <div class="section-label">Le Déroulé</div>
+      <h2 class="section-title">
+        <span class="script-letter">P</span>rogramme <span class="serif-part">de</span><br>
+        <span class="script-letter">l'É</span>vénement
+      </h2>
+
+      <div class="programme-card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="tl-time">17h30</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">Cortège de mariage</div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-time">18h00</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">Réception</div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-time">19h00</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">Dîner</div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-time">21h00</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">Soirée</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 6: DÉTAILS ── -->
+    <section class="section details-section">
+      <div class="section-label">À Savoir</div>
+      <h2 class="section-title">
+        <span class="script-letter">D</span>étails <span class="serif-part">de</span><br>
+        <span class="script-letter">l'É</span>vénement
+      </h2>
+      <div class="details-list">
+        <div class="detail-item">
+          <div class="detail-dot"></div>
+          <div class="detail-card">
+            <span class="detail-icon">ⓘ</span>
+            Veuillez arriver à l'heure
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-dot"></div>
+          <div class="detail-card">
+            <span class="detail-icon">ⓘ</span>
+            Confirmation de présence requise
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-dot"></div>
+          <div class="detail-card">
+            <span class="detail-icon">ⓘ</span>
+            Photos interdites pendant la cérémonie
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-dot"></div>
+          <div class="detail-card">
+            <span class="detail-icon">ⓘ</span>
+            Tenue de soirée exigée
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 7: LOCATION ── -->
+    <section class="section location-section">
+      <div class="section-label">Le Lieu</div>
+      <h2 class="section-title">
+        <span class="script-letter">S</span>alle <span class="serif-part">Benkoli</span>
+      </h2>
+      <p class="location-address">Salle des Fêtes Benkoli — Annaba, Algérie</p>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=Salle+des+Fetes+Benkoli+Annaba&output=embed"
+          width="100%" height="300" style="border:0;" allowfullscreen
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Localisation — Salle Benkoli">
+        </iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/QZKrBppcyYgTwopr8" target="_blank" rel="noopener" class="btn-map">
+        Voir dans Google Maps
+      </a>
+    </section>
+
+    <!-- ── SECTION 8: THANK YOU (GLOVE CARD) ── -->
+    <section class="section thankyou-section">
+      <div class="glove-scene">
+        <div class="glove-hand" aria-hidden="true">
+          <!-- CSS-drawn glove hand -->
+          <div class="glove-palm">
+            <div class="glove-thumb"></div>
+            <div class="glove-fingers">
+              <div class="glove-finger f1"></div>
+              <div class="glove-finger f2"></div>
+              <div class="glove-finger f3"></div>
+              <div class="glove-finger f4"></div>
+            </div>
+          </div>
+        </div>
+        <div class="thankyou-card">
+          <div class="thankyou-ornament"></div>
+          <h2 class="thankyou-title">
+            <span class="script-letter">M</span>erci
+          </h2>
+          <div class="thankyou-divider">✦ ✦ ✦</div>
+          <p class="thankyou-body">
+            Votre présence à nos côtés en ce jour si précieux est le plus beau des cadeaux. Merci de partager avec nous ce moment unique, rempli d'amour et de bonheur. Votre soutien et votre affection comptent énormément pour nous.
+          </p>
+          <p class="thankyou-sign">
+            <span class="script-letter">A</span>hmad <span class="serif-part">&amp;</span> <span class="script-letter">S</span>amara
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 9: RSVP ── -->
+    <section class="section rsvp-section" id="rsvp">
+      <div class="section-label">Réponse</div>
+      <h2 class="section-title rsvp-big">
+        <span class="script-letter">S</span>erez-vous<br>
+        <span class="serif-part">des nôtres ?</span>
+      </h2>
+      <p class="rsvp-sub">Nous serions profondément honorés de vous compter parmi nous. Merci de confirmer votre présence.</p>
+
+      <form id="rsvp-form" class="rsvp-form" novalidate>
+        <div class="form-group">
+          <label for="rsvp-name">Nom complet</label>
+          <input type="text" id="rsvp-name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <label for="rsvp-attendance">Présence</label>
+          <select id="rsvp-attendance" name="attendance" required>
+            <option value="" disabled selected>Sélectionner…</option>
+            <option value="yes">Je serai présent(e) avec plaisir</option>
+            <option value="no">Je ne pourrai malheureusement pas venir</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rsvp-guests">Nombre d'invités</label>
+          <input type="number" id="rsvp-guests" name="guests" min="1" max="10" value="1">
+        </div>
+        <button type="submit" class="btn-rsvp">
+          Envoyer ma réponse
+        </button>
+        <div id="rsvp-success" class="rsvp-success hidden">
+          Merci ! Votre réponse a bien été enregistrée. ✦
+        </div>
+      </form>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="site-footer">
+      <p class="footer-names"><span class="script-letter">A</span>hmad <span class="amp-small">&amp;</span> <span class="script-letter">S</span>amara</p>
+      <p class="footer-date">16 · 08 · 2026</p>
+    </footer>
+
+  </main><!-- end #main-content -->
+
+  <!-- ═══════════════════════════════════════════
+       LIQUID GLASS NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav class="liquid-nav hidden" id="liquid-nav" aria-label="Navigation principale">
+    <button class="nav-item" id="nav-congrats" aria-label="Félicitations">
+      <span class="nav-icon">💌</span>
+      <span class="nav-label">Vœux</span>
+    </button>
+    <button class="nav-item" id="nav-calendar" aria-label="Ajouter au calendrier">
+      <span class="nav-icon">📅</span>
+      <span class="nav-label">Agenda</span>
+    </button>
+    <button class="nav-item" id="nav-contact" aria-label="Contacter">
+      <span class="nav-icon">📞</span>
+      <span class="nav-label">Contact</span>
+    </button>
+    <button class="nav-item" id="nav-location" aria-label="Localisation">
+      <span class="nav-icon">📍</span>
+      <span class="nav-label">Lieu</span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       MODALS
+  ═══════════════════════════════════════════ -->
+
+  <!-- Congratulations modal -->
+  <div id="modal-congrats" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Envoyer vos vœux">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fermer">✕</button>
+      <h3 class="modal-title">
+        <span class="script-letter">F</span>élicitations
+      </h3>
+      <div class="modal-divider">✦</div>
+      <p class="modal-sub">Partagez un mot doux pour les mariés</p>
+      <textarea id="congrats-text" class="modal-textarea" placeholder="Vos plus sincères félicitations…" rows="4"></textarea>
+      <input type="text" id="congrats-name" class="modal-input" placeholder="Votre prénom">
+      <button class="btn-modal-send" id="send-congrats">Envoyer ✦</button>
+      <div id="congrats-sent" class="modal-sent hidden">Merci pour vos vœux ! 💛</div>
+    </div>
+  </div>
+
+  <!-- Contact modal -->
+  <div id="modal-contact" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Contact">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Fermer">✕</button>
+      <h3 class="modal-title">
+        <span class="script-letter">C</span>ontact
+      </h3>
+      <div class="modal-divider">✦</div>
+      <p class="modal-sub">Pour toute question, n'hésitez pas à nous contacter</p>
+      <a href="tel:0774843099" class="contact-btn">
+        <span>📞</span> 0774 843 099
+      </a>
+      <a href="https://maps.app.goo.gl/QZKrBppcyYgTwopr8" target="_blank" rel="noopener" class="contact-btn">
+        <span>📍</span> Salle Benkoli — Annaba
+      </a>
+    </div>
+  </div>
+
+  <!-- Particles canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
